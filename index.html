@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jihyung Kim</title>
+<meta name="author" content="Jihyung Kim">
+<meta name="description" content="Jihyung Kim — Lecturer in the Department of AI Convergence at Sahmyook University. Multi-agent LLM safety, misinformation interventions, AI education.">
+<meta property="og:title" content="Jihyung Kim">
+<meta property="og:description" content="Lecturer, Department of AI Convergence, Sahmyook University.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;
+  --surface:#ffffff;   /* main content area */
+  --navbg:#f6f7f8;     /* nav bar keeps the light tint */
+  --text:#1c2126;
+  --muted:#5b6570;
+  --line:#e4e7ea;
+  --accent:#236471;
+  --accent-soft:#e8f1f2;
+  --maxw:1120px;
+}
+html[data-theme="dark"]{
+  --bg:#14181c;
+  --surface:#14181c;
+  --navbg:#1c2126;
+  --text:#dfe3e7;
+  --muted:#9aa3ad;
+  --line:#2b3238;
+  --accent:#6fb3c0;
+  --accent-soft:#1f2b30;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:"Source Sans 3","Helvetica Neue",Arial,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;background:var(--navbg);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{
+  max-width:var(--maxw);margin:0 auto;padding:0 24px;height:58px;
+  display:flex;align-items:center;gap:8px;
+}
+.brand{font-weight:700;font-size:19px;color:var(--text);margin-right:auto}
+.brand:hover{text-decoration:none;color:var(--accent)}
+.nav a.link{padding:8px 11px;color:var(--muted);font-size:16px;border-radius:5px}
+.nav a.link:hover{color:var(--accent);background:var(--accent-soft);text-decoration:none}
+.tbtn{
+  border:1px solid var(--line);background:transparent;color:var(--muted);
+  width:34px;height:34px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1;
+  margin-left:6px;display:grid;place-items:center;
+}
+.tbtn:hover{color:var(--accent);border-color:var(--accent)}
+
+/* ---------- hero ---------- */
+.hero{background:var(--surface)}
+.hero-in{
+  max-width:var(--maxw);margin:0 auto;padding:54px 24px;
+  display:grid;grid-template-columns:270px 1fr;gap:48px;align-items:start;
+}
+.card{text-align:center}
+.avatar{
+  width:180px;height:180px;border-radius:50%;object-fit:cover;
+  display:block;margin:0 auto 18px;border:1px solid var(--line);background:var(--bg);
+}
+.card h1{font-size:27px;margin:0 0 6px;font-weight:700;line-height:1.25}
+.card .affil{font-size:16px;color:var(--muted);margin:0 0 16px}
+.card .affil a{color:var(--muted)}
+.card .affil a:hover{color:var(--accent)}
+.icons{display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+.icons a{
+  width:34px;height:34px;display:grid;place-items:center;border-radius:50%;
+  color:var(--muted);border:1px solid var(--line);
+}
+.icons a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.icons svg{width:17px;height:17px;fill:currentColor}
+
+.bio h2,.sec h2{
+  font-size:25px;font-weight:700;margin:0 0 16px;
+  padding-bottom:9px;border-bottom:1px solid var(--line);
+}
+.bio p{margin:0 0 15px;max-width:70ch}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:30px}
+.two h3{font-size:19px;font-weight:700;margin:0 0 12px}
+.ul{list-style:none;margin:0;padding:0}
+.ul li{position:relative;padding-left:17px;margin-bottom:7px}
+.ul li::before{content:"";position:absolute;left:0;top:.68em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.edu li{margin-bottom:15px;padding-left:0}
+.edu li::before{display:none}
+.edu .deg{font-weight:600;display:block}
+.edu .whr{color:var(--muted);font-size:15.5px}
+
+/* ---------- sections ---------- */
+main{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.sec{padding:44px 0;border-bottom:1px solid var(--line)}
+.sec:last-of-type{border-bottom:none}
+
+.news li{margin-bottom:9px;padding-left:0}
+.news li::before{display:none}
+.news .date{color:var(--accent);font-weight:600;margin-right:8px;white-space:nowrap}
+
+.item{padding:18px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .t{font-weight:600;font-size:18px;margin:0 0 5px}
+.item .meta{color:var(--muted);font-size:15.5px;margin:0}
+.item .desc{margin:8px 0 0;max-width:78ch}
+.tag{
+  display:inline-block;font-size:13.5px;font-weight:600;color:var(--accent);
+  background:var(--accent-soft);border-radius:4px;padding:2px 8px;margin-left:8px;
+  vertical-align:2px;
+}
+.rowhead{display:flex;gap:14px;justify-content:space-between;align-items:baseline}
+.rowhead .t{flex:1 1 auto;min-width:0}
+.when{flex:0 0 auto;color:var(--muted);font-size:15.5px;white-space:nowrap}
+
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
+.tgrid .item{border-bottom:1px solid var(--line)}
+
+footer{
+  border-top:1px solid var(--line);color:var(--muted);font-size:15px;
+  text-align:center;padding:26px 24px;
+}
+
+@media (max-width:560px){
+  .brand{display:none}
+  .nav-in{padding:0 12px;gap:0;justify-content:space-between}
+  .nav a.link{padding:8px 7px;font-size:14.5px}
+}
+@media (max-width:860px){
+  .hero-in{grid-template-columns:1fr;gap:32px;padding:36px 20px}
+  .two,.tgrid{grid-template-columns:1fr;gap:26px}
+  .nav a.link{padding:8px 8px;font-size:15px}
+  .brand{font-size:17px}
+  body{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top">Jihyung Kim</a>
+    <a class="link" href="#about">Home</a>
+    <a class="link" href="#news">News</a>
+    <a class="link" href="#research">Research</a>
+    <a class="link" href="#teaching">Teaching</a>
+    <button class="tbtn" id="themeBtn" type="button" aria-label="Switch to dark mode">☾</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-in">
+
+    <div class="card">
+      <img class="avatar" src="avatar.jpg" alt="Jihyung Kim" width="180" height="180">
+      <h1>Jihyung Kim</h1>
+      <p class="affil"><a href="https://www.syu.ac.kr/">Sahmyook University, Seoul</a></p>
+      <div class="icons">
+        <a href="mailto:jihyungkim94@gmail.com" title="Email" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4.2l-8 5-8-5V6l8 5 8-5v2.2z"/></svg>
+        </a>
+        <a href="https://github.com/jihyungkim94" title="GitHub" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 .5A11.5 11.5 0 00.5 12a11.5 11.5 0 007.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.76.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.42.36.8 1.08.8 2.18v3.23c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12 11.5 11.5 0 0012 .5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/jeremykim94/" title="LinkedIn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.65h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.55 4.78 5.87V21h-4v-5.5c0-1.31-.03-3-1.9-3-1.9 0-2.2 1.42-2.2 2.9V21H9z"/></svg>
+        </a>
+        <a href="Jihyung_Kim_CV.pdf" title="Curriculum vitae" aria-label="Curriculum vitae">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="bio" id="about">
+      <h2>Biography</h2>
+      <p>I am a lecturer in the <a href="https://www.syu.ac.kr/">Department of AI Convergence at Sahmyook University</a> in Seoul, where I teach applied deep learning, data science, data structures and algorithms, and AI literacy. I hold an M.C.S. from the University of Illinois Urbana-Champaign.</p>
+      <p>Before returning to academia I worked in corporate strategic planning at <a href="https://www.stealien.com/">Stealien</a>, a cybersecurity company. Earlier, I was a research assistant in the Socio-Technical Interaction Research Lab at the University of Central Florida, where I worked on co-designing online safety interventions with teens, and in the Future Reality Lab at the University of Arizona.</p>
+
+      <div class="two">
+        <div>
+          <h3>Interests</h3>
+          <ul class="ul">
+            <li>AI safety in multi-agent LLM systems</li>
+            <li>Misinformation and counter-misinformation interventions</li>
+            <li>LLM social simulation</li>
+            <li>Human-centered AI and computing education</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Education</h3>
+          <ul class="ul edu">
+            <li><span class="deg">M.C.S. in Computer Science, 2026</span><span class="whr">University of Illinois Urbana-Champaign</span></li>
+            <li><span class="deg">Ph.D. program in Computer Science, 2021–2023</span><span class="whr">University of Central Florida</span></li>
+            <li><span class="deg">B.S. in Information Science, 2021</span><span class="whr">University of Arizona</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+  <section class="sec" id="news">
+    <h2>News</h2>
+    <ul class="ul news">
+      <li><span class="date">[Aug. 2026]</span>Completed my M.C.S. at the University of Illinois Urbana-Champaign.</li>
+      <li><span class="date">[Mar. 2026]</span>Joined Sahmyook University as a lecturer in the Department of AI Convergence.</li>
+    </ul>
+  </section>
+
+  <section class="sec" id="research">
+    <h2>Research</h2>
+
+    <div class="item">
+      <p class="t">Co-designing online safety interventions with teens</p>
+      <p class="meta">Socio-Technical Interaction Research Lab, University of Central Florida</p>
+      <p class="desc">Contributed to a UX bootcamp with participants aged 13–17, co-designing online safety interventions and teaching UX design methods and industry-standard tools.</p>
+    </div>
+
+    <div class="item">
+      <p class="t">Animated sketching interfaces for live explanation</p>
+      <p class="meta">Future Reality Lab, University of Arizona</p>
+      <p class="desc">Studied a digital sketching interface that visualizes ideas as they are spoken about in presentations and conversation. Also part of the Sciences Designs Vertically Integrated Project, advancing the UA Holodeck and building health- and well-being-centered interactive experiences.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="teaching">
+    <h2>Teaching</h2>
+    <div class="tgrid">
+      <div class="item">
+        <div class="rowhead"><p class="t">Applied Deep Learning</p><span class="when">Fall 2026</span></div>
+        <p class="meta">Instructor · Sahmyook University</p>
+      </div>
+      <div class="item">
+        <div class="rowhead"><p class="t">Introduction to Data Science</p><span class="when">Fall 2026</span></div>
+        <p class="meta">Instructor · Sahmyook University (English-medium)</p>
+      </div>
+      <div class="item">
+        <div class="rowhead"><p class="t">Data Structures</p><span class="when">Fall 2026</span></div>
+        <p class="meta">Instructor · Sahmyook University (English-medium)</p>
+      </div>
+      <div class="item">
+        <div class="rowhead"><p class="t">Data Structures and Algorithms</p><span class="when">Spring 2026</span></div>
+        <p class="meta">Instructor · Sahmyook University</p>
+      </div>
+      <div class="item">
+        <div class="rowhead"><p class="t">AI Literacy and Problem Solving</p><span class="when">Spring 2026</span></div>
+        <p class="meta">Instructor · Sahmyook University</p>
+      </div>
+      <div class="item">
+        <div class="rowhead"><p class="t">Foundations of HCI (CAP 3104)</p><span class="when">2021–2022</span></div>
+        <p class="meta">Teaching assistant · University of Central Florida</p>
+      </div>
+      <div class="item">
+        <div class="rowhead"><p class="t">Security in Computing (CIS 3360)</p><span class="when">Summer 2022</span></div>
+        <p class="meta">Teaching assistant · University of Central Florida</p>
+      </div>
+      <div class="item">
+        <div class="rowhead"><p class="t">Computer Understanding of Natural Language (CAP 6640)</p><span class="when">Spring 2022</span></div>
+        <p class="meta">Teaching assistant · University of Central Florida</p>
+      </div>
+      <div class="item">
+        <div class="rowhead"><p class="t">Program Analysis (COP 5021)</p><span class="when">Spring 2022</span></div>
+        <p class="meta">Teaching assistant · University of Central Florida</p>
+      </div>
+      <div class="item">
+        <div class="rowhead"><p class="t">Introduction to Programming Language</p><span class="when">2021</span></div>
+        <p class="meta">Volunteer instructor · Pima Community College</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="experience">
+    <h2>Experience</h2>
+    <div class="item">
+      <div class="rowhead"><p class="t">Sahmyook University</p><span class="when">Mar 2026 – Present</span></div>
+      <p class="meta">Lecturer, Department of AI Convergence · Seoul</p>
+    </div>
+    <div class="item">
+      <div class="rowhead"><p class="t">Stealien</p><span class="when">Aug 2023 – Jan 2026</span></div>
+      <p class="meta">Senior Strategic Planner, Management Support Office · Seoul</p>
+      <p class="desc">Corporate strategy planning, partnership development, and new-market entry strategy at a cybersecurity company.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>© 2026 Jihyung Kim</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('themeBtn'),root=document.documentElement;
+  var dark=false;
+  function apply(){
+    root.setAttribute('data-theme',dark?'dark':'light');
+    btn.textContent=dark?'☀':'☾';
+    btn.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');
+  }
+  apply();
+  btn.addEventListener('click',function(){dark=!dark;apply();});
+})();
+</script>
+
+</body>
+</html>
