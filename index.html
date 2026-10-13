@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jihyung Kim</title>
 <meta name="author" content="Jihyung Kim">
-<meta name="description" content="Jihyung Kim — Lecturer in the Department of AI Convergence at Sahmyook University. Multi-agent LLM safety, misinformation interventions, AI education.">
+<meta name="description" content="Jihyung Kim — Lecturer in the Department of AI Convergence at Sahmyook University. Quantum computation and complexity theory: quantum query and communication complexity, Fourier analysis of Boolean functions.">
 <meta property="og:title" content="Jihyung Kim">
 <meta property="og:description" content="Lecturer, Department of AI Convergence, Sahmyook University.">
 <meta property="og:type" content="profile">
@@ -127,6 +127,9 @@ main{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 .rowhead .t{flex:1 1 auto;min-width:0}
 .when{flex:0 0 auto;color:var(--muted);font-size:15.5px;white-space:nowrap}
 
+.sec h3{font-size:19px;font-weight:700;margin:30px 0 0}
+.sec h2+h3{margin-top:0}
+
 .tgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
 .tgrid .item{border-bottom:1px solid var(--line)}
 
@@ -188,16 +191,17 @@ footer{
     <div class="bio" id="about">
       <h2>Biography</h2>
       <p>I am a lecturer in the <a href="https://www.syu.ac.kr/">Department of AI Convergence at Sahmyook University</a> in Seoul, where I teach applied deep learning, data science, data structures and algorithms, and AI literacy. I hold an M.C.S. from the University of Illinois Urbana-Champaign.</p>
+      <p>My current research is in quantum computation and computational complexity theory. I study when quantum algorithms and protocols provably outperform classical ones in query and communication complexity, using Fourier analysis of Boolean functions, and how much of that advantage survives noise.</p>
       <p>Before returning to academia I worked in corporate strategic planning at <a href="https://www.stealien.com/">Stealien</a>, a cybersecurity company. Earlier, I was a research assistant in the Socio-Technical Interaction Research Lab at the University of Central Florida, where I worked on co-designing online safety interventions with teens, and in the Future Reality Lab at the University of Arizona.</p>
 
       <div class="two">
         <div>
           <h3>Interests</h3>
           <ul class="ul">
-            <li>AI safety in multi-agent LLM systems</li>
-            <li>Misinformation and counter-misinformation interventions</li>
-            <li>LLM social simulation</li>
-            <li>Human-centered AI and computing education</li>
+            <li>Quantum query and communication complexity</li>
+            <li>Quantum–classical separations and Forrelation</li>
+            <li>Fourier analysis of Boolean functions</li>
+            <li>Noisy (NISQ) quantum computation</li>
           </ul>
         </div>
         <div>
@@ -227,16 +231,34 @@ footer{
   <section class="sec" id="research">
     <h2>Research</h2>
 
-    <div class="item">
-      <p class="t">Co-designing online safety interventions with teens</p>
-      <p class="meta">Socio-Technical Interaction Research Lab, University of Central Florida</p>
-      <p class="desc">Contributed to a UX bootcamp with participants aged 13–17, co-designing online safety interventions and teaching UX design methods and industry-standard tools.</p>
+    <h3>Current: quantum computation and complexity theory</h3>
+    <div>
+      <div class="item">
+        <p class="t">Extremal Forrelation in communication complexity<span class="tag">In progress</span></p>
+        <p class="meta">Independent research · Quantum communication complexity</p>
+        <p class="desc">Does the XOR lift of the Extremal Forrelation problem exponentially separate zero-error quantum simultaneous-message protocols with shared entanglement from two-way randomized communication?</p>
+      </div>
+
+      <div class="item">
+        <p class="t">Fourier growth of noisy quantum algorithms<span class="tag">In progress</span></p>
+        <p class="meta">Independent research · Quantum query complexity</p>
+        <p class="desc">How does depolarizing gate noise limit the Fourier growth of quantum query algorithms, and how many queries does a noisy intermediate-scale (NISQ) quantum computer need to solve Forrelation?</p>
+      </div>
     </div>
 
-    <div class="item">
-      <p class="t">Animated sketching interfaces for live explanation</p>
-      <p class="meta">Future Reality Lab, University of Arizona</p>
-      <p class="desc">Studied a digital sketching interface that visualizes ideas as they are spoken about in presentations and conversation. Also part of the Sciences Designs Vertically Integrated Project, advancing the UA Holodeck and building health- and well-being-centered interactive experiences.</p>
+    <h3>Earlier: human–computer interaction</h3>
+    <div>
+      <div class="item">
+        <p class="t">Co-designing online safety interventions with teens</p>
+        <p class="meta">Socio-Technical Interaction Research Lab, University of Central Florida</p>
+        <p class="desc">Contributed to a UX bootcamp with participants aged 13–17, co-designing online safety interventions and teaching UX design methods and industry-standard tools.</p>
+      </div>
+
+      <div class="item">
+        <p class="t">Animated sketching interfaces for live explanation</p>
+        <p class="meta">Future Reality Lab, University of Arizona</p>
+        <p class="desc">Studied a digital sketching interface that visualizes ideas as they are spoken about in presentations and conversation. Also part of the Sciences Designs Vertically Integrated Project, advancing the UA Holodeck and building health- and well-being-centered interactive experiences.</p>
+      </div>
     </div>
   </section>
 
