@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jihyung Kim</title>
 <meta name="author" content="Jihyung Kim">
-<meta name="description" content="Jihyung Kim — Lecturer in the Department of AI Convergence at Sahmyook University. Quantum computation and complexity theory: quantum query and communication complexity, Fourier analysis of Boolean functions.">
+<meta name="description" content="Jihyung Kim — Lecturer in the Department of AI Convergence at Sahmyook University. Quantum query complexity: Fourier growth of quantum algorithms with few clean qubits or limited adaptivity.">
 <meta property="og:title" content="Jihyung Kim">
 <meta property="og:description" content="Lecturer, Department of AI Convergence, Sahmyook University.">
 <meta property="og:type" content="profile">
@@ -127,6 +127,7 @@ main{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 .rowhead .t{flex:1 1 auto;min-width:0}
 .when{flex:0 0 auto;color:var(--muted);font-size:15.5px;white-space:nowrap}
 
+sub{line-height:0}
 .sec h3{font-size:19px;font-weight:700;margin:30px 0 0}
 .sec h2+h3{margin-top:0}
 
@@ -191,17 +192,17 @@ footer{
     <div class="bio" id="about">
       <h2>Biography</h2>
       <p>I am a lecturer in the <a href="https://www.syu.ac.kr/">Department of AI Convergence at Sahmyook University</a> in Seoul, where I teach applied deep learning, data science, data structures and algorithms, and AI literacy. I hold an M.C.S. from the University of Illinois Urbana-Champaign.</p>
-      <p>My current research is in quantum computation and computational complexity theory. I study when quantum algorithms and protocols provably outperform classical ones in query and communication complexity, using Fourier analysis of Boolean functions, and how much of that advantage survives noise.</p>
+      <p>My current research is in quantum query complexity. I work on bounding the Fourier growth of quantum query algorithms, in particular algorithms with only a few clean qubits or a few rounds of adaptivity, and on the query lower bounds that such bounds give.</p>
       <p>Before returning to academia I worked in corporate strategic planning at <a href="https://www.stealien.com/">Stealien</a>, a cybersecurity company. Earlier, I was a research assistant in the Socio-Technical Interaction Research Lab at the University of Central Florida, where I worked on co-designing online safety interventions with teens, and in the Future Reality Lab at the University of Arizona.</p>
 
       <div class="two">
         <div>
           <h3>Interests</h3>
           <ul class="ul">
-            <li>Quantum query and communication complexity</li>
-            <li>Quantum–classical separations and Forrelation</li>
+            <li>Quantum query complexity</li>
             <li>Fourier analysis of Boolean functions</li>
-            <li>Noisy (NISQ) quantum computation</li>
+            <li>Quantum algorithms with few clean qubits</li>
+            <li>Adaptivity in quantum query algorithms</li>
           </ul>
         </div>
         <div>
@@ -231,18 +232,18 @@ footer{
   <section class="sec" id="research">
     <h2>Research</h2>
 
-    <h3>Current: quantum computation and complexity theory</h3>
+    <h3>Current: quantum query complexity</h3>
     <div>
       <div class="item">
-        <p class="t">Extremal Forrelation in communication complexity<span class="tag">In progress</span></p>
-        <p class="meta">Independent research · Quantum communication complexity</p>
-        <p class="desc">Does the XOR lift of the Extremal Forrelation problem exponentially separate zero-error quantum simultaneous-message protocols with shared entanglement from two-way randomized communication?</p>
+        <p class="t">Fourier growth of DQC<sub><i>k</i></sub> algorithms<span class="tag">In progress</span></p>
+        <p class="meta">Independent research · Quantum query complexity</p>
+        <p class="desc">Level-two Fourier bounds for quantum query algorithms with only <i>k</i> clean qubits, and the query lower bounds they give. Builds on Girish, <a href="https://arxiv.org/abs/2510.06385">Fourier Spectrum of Noisy Quantum Algorithms</a> (STOC 2026).</p>
       </div>
 
       <div class="item">
-        <p class="t">Fourier growth of noisy quantum algorithms<span class="tag">In progress</span></p>
+        <p class="t">Adaptivity in quantum query algorithms<span class="tag">In progress</span></p>
         <p class="meta">Independent research · Quantum query complexity</p>
-        <p class="desc">How does depolarizing gate noise limit the Fourier growth of quantum query algorithms, and how many queries does a noisy intermediate-scale (NISQ) quantum computer need to solve Forrelation?</p>
+        <p class="desc">Fourier growth of algorithms with few adaptive rounds, and the trade-off between rounds and parallel queries from Girish, Sinha, Tal, and Wu, <a href="https://arxiv.org/abs/2311.16057">The Power of Adaptivity in Quantum Query Algorithms</a> (STOC 2024).</p>
       </div>
     </div>
 
